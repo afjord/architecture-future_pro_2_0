@@ -1,6 +1,8 @@
-cpu=1
-mem=2
-subnet_id="<131231>"
-ssh_pub_path="/home/test/.id_rsa.pub"
-zone="ru-central-a"
-disk_block_size=15
+cpu       = 1
+mem       = 2
+subnet_id = "<replace-with-yandex-subnet-id>"
+ssh_pub   = "replace-with-public-ssh-key"
+zone      = "ru-central-a"
+disk_size = 15
+disk_name = "test-vm-disk-stage"
+vm_name   = "test-vm-stage"
