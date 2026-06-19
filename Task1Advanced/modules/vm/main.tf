@@ -16,7 +16,7 @@ resource "yandex_compute_disk" "disk" {
   type = var.disk_type
   zone = var.zone
   image_id = data.yandex_compute_image.ubuntu.image_id
-  size = var.disk_block_size
+  size = var.disk_size
 }
 
 resource "yandex_compute_instance" "testvm" {
@@ -36,6 +36,6 @@ resource "yandex_compute_instance" "testvm" {
   }
 
   metadata = {
-    ssh-keys = "testUser:${file(var.ssh_pub_path)}"
+    ssh-keys = "testUser:${var.ssh_pub}"
   }
 }

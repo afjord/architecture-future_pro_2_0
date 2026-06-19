@@ -4,7 +4,7 @@ output "instance_id" {
 }
 
 output "instance_ip" {
-  value = yandex_compute_instance.testvm.network_interface.ip_address
+  value = yandex_compute_instance.testvm.network_interface[0].ip_address
   description = "Частный IP адрес"
 }
 
@@ -14,6 +14,6 @@ output "instance_name" {
 }
 
 output "disk_id" {
-  value = yandex_compute_instance.testvm.boot_disk.disk_id
+  value = yandex_compute_instance.testvm.boot_disk[0].disk_id
   description = "Id диска"
 }

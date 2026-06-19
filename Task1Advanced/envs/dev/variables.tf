@@ -27,9 +27,3 @@ variable "disk_size" {
   type = number
   description = "Размер диска в (Gb)"
 }
-
-variable "disk_type" {
-  type = string
-  description = "Тип диска"
-  default = "network-ssd"
-}
